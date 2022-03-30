@@ -1,23 +1,59 @@
-import logo from './logo.svg';
-import './App.css';
+import { useEffect, useRef, useState } from "react";
+import Background from "./components/Background";
+import First from "./components/screens/First";
+import Fourth from "./components/screens/Fourth";
+import Second from "./components/screens/Second";
 
 function App() {
+  const [currentView, setCurrentView] = useState(1);
+  const isSectionChanged = useRef(false);
+
+  function handleViewChange(e) {
+    if (isSectionChanged.current) return;
+
+    isSectionChanged.current = true;
+
+    if (e.deltaY > 0) {
+      setCurrentView((prev) => {
+        setTimeout(() => {
+          isSectionChanged.current = false;
+        }, 1000);
+
+        if (prev < 6) {
+          return prev + 1;
+        }
+        return prev;
+      });
+    }
+
+    if (e.deltaY < 0) {
+      setCurrentView((prev) => {
+        setTimeout(() => {
+          isSectionChanged.current = false;
+        }, 1500);
+
+        if (prev > 1) {
+          return prev - 1;
+        }
+        return prev;
+      });
+    }
+  }
+
+  useEffect(() => {
+    console.log("currentView", currentView);
+  }, [currentView]);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div
+      onWheel={handleViewChange}
+      className="w-full h-screen relative overflow-hidden"
+    >
+      <Background />
+
+      <First currentView={currentView} />
+      <Second currentView={currentView} />
+      <Fourth currentView={currentView} />
     </div>
   );
 }
