@@ -1,8 +1,10 @@
 import { useEffect, useRef, useState } from "react";
 import Background from "./components/Background";
+import Fifth from "./components/screens/Fifth";
 import First from "./components/screens/First";
 import Fourth from "./components/screens/Fourth";
 import Second from "./components/screens/Second";
+import Sixth from "./components/screens/Sixth";
 
 function App() {
   const [currentView, setCurrentView] = useState(1);
@@ -54,6 +56,8 @@ function App() {
       <First currentView={currentView} />
       <Second currentView={currentView} />
       <Fourth currentView={currentView} />
+      <Fifth currentView={currentView} />
+      <Sixth currentView={currentView} />
     </div>
   );
 }

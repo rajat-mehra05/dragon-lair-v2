@@ -44,13 +44,13 @@ const textVariants = {
       duration: 2,
     },
   }),
-  exit: {
-    top: "100%",
+  exit: (isSecond) => ({
+    top: isSecond ? "-100%" : "100%",
     opacity: 0,
     transition: {
       duration: 2,
     },
-  },
+  }),
 };
 
 const Second = ({ currentView }) => {
@@ -58,6 +58,7 @@ const Second = ({ currentView }) => {
 
   useEffect(() => {
     if (currentView === 2) mountainControls.start("animate");
+    if (currentView === 3) mountainControls.start("animate");
 
     if (currentView === 1) mountainControls.start("initial");
     if (currentView === 4) mountainControls.start("exit");
