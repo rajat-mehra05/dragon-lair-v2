@@ -57,33 +57,33 @@ const Sixth = ({ currentView }) => {
           >
             <motion.div
               variants={listVariants}
-              className="flex flex-col-reverse w-[40%] z-[7] gap-4 transform -translate-y-4 text-white self-start"
+              className="flex flex-col-reverse w-[80%] z-[7] gap-4 transform -translate-y-4 text-white self-start"
             >
               <p className="text-3xl"> PHASE 1 </p>
               <ul>
-                <li>-STEALTH LAUNCH</li>
+                <li>- STEALTH LAUNCH</li>
                 <li>- LIQUIDITY UNLOCKED</li>
-                <li>-SOCIALS LIVE</li>
-                <li>-CMC & COINGECKO LISTING</li>
+                <li>- SOCIALS LIVE</li>
+                <li>- CMC & COINGECKO LISTING</li>
               </ul>
             </motion.div>
 
             <motion.div
               variants={listVariants}
-              className="flex flex-col z-[7] gap-4 w-[50%]  text-white self-end"
+              className="flex flex-col z-[7] gap-4 w-[70%] transform translate-y-12  text-white self-end"
             >
               <p className="text-3xl"> PHASE 2 </p>
               <ul>
-                <li>-PROJECT DASHBOARD LAUNCH</li>
+                <li>- PROJECT DASHBOARD LAUNCH</li>
                 <li>- CONTRACT AUDIT</li>
-                <li>-PARTNERSHIPS/LISTINGS WITH LEADINGS DEGEN PLATFORMS</li>
-                <li>-MERCHANDISE RELEASE</li>
+                <li>- PARTNERSHIPS/LISTINGS WITH LEADINGS DEGEN PLATFORMS</li>
+                <li>- MERCHANDISE RELEASE</li>
               </ul>
             </motion.div>
 
             <motion.div
               variants={listVariants}
-              className="flex flex-col-reverse z-[7] w-[50%] gap-4 transform -translate-y-4 text-white self-start"
+              className="flex flex-col-reverse z-[7] w-[80%] gap-4 transform -translate-y-4 text-white self-start"
             >
               <p className="text-3xl"> PHASE 3 </p>
               <ul>

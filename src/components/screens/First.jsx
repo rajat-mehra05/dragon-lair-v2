@@ -1,6 +1,6 @@
 import { motion, useAnimation } from "framer-motion";
 import React, { useEffect, useState } from "react";
-import dragon from "../../assets/gif/dragon2.gif";
+import dragon from "../../assets/gif/dragon3.gif";
 import dragonText from "../../assets/gif/dragontext.gif";
 import staticDragon from "../../assets/images/dragonFireless.png";
 
@@ -14,7 +14,7 @@ const First = ({ currentView }) => {
       btnControls.start({
         opacity: 1,
         scaleX: 1,
-        x: -108,
+        x: -160,
         y: -112,
         transition: {
           delay: 1.5,
@@ -78,7 +78,7 @@ const First = ({ currentView }) => {
           <img
             src={isStaticDragon ? staticDragon : dragon}
             alt="dragon"
-            className={`${currentView !== 1 ? "w-60" : ""}`}
+            className={`${currentView !== 1 ? "w-60" : "w-[600px]"}`}
           />
           <motion.div
             initial={{
@@ -91,11 +91,17 @@ const First = ({ currentView }) => {
               delay: 1,
             }}
           >
-            <img src={dragonText} alt="Dragon's Lair" className="w-96" />
+            <img
+              src={dragonText}
+              alt="Dragon's Lair"
+              className={`${
+                isStaticDragon ? "w-96" : "w-96 transform -translate-x-20"
+              }`}
+            />
           </motion.div>
         </motion.div>
         <motion.button
-          initial={{ opacity: 0, x: -108, y: -112 }}
+          initial={{ opacity: 0, x: -160, y: -112 }}
           animate={btnControls}
           className="bg-gradient-to-br from-yellow-400 via-yellow-600 to-[#ef660a] px-12 py-2 rounded-lg max-w-max text-white"
         >
@@ -107,3 +113,10 @@ const First = ({ currentView }) => {
 };
 
 export default First;
+
+/* 
+sm: > 640
+md: > 768
+lg: > 1024
+xl: 
+*/
