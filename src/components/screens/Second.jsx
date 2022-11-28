@@ -85,14 +85,14 @@ const Second = ({ currentView }) => {
             custom={false}
             className="w-full absolute left-0 flex justify-around px-2"
           >
-            <p className="text-white w-[35%] pl-20 ">
+            <p className="text-white w-[35%] pl-20 pt-28">
               <h2 className="text-[#e28529] pb-8 text-2xl mt-8">
                 Who are we ?
               </h2>
               Dragon's Lair is a launchpad for the most daring and innovate of
               new crypto and NFT projects.
             </p>
-            <p className="text-white w-[28%] pb-12">
+            <p className="text-white w-[28%] pb-12 pt-24">
               <h2 className="text-[#e28529] pb-8 text-2xl">
                 What's our goal ?
               </h2>
@@ -115,7 +115,7 @@ const Second = ({ currentView }) => {
             custom={true}
             className="w-full absolute left-0 flex justify-around"
           >
-            <div className="w-[30%] pl-20 py-4 mt-16">
+            <div className="w-[30%] pl-20 px-4 pt-28 mt-16">
               <h2 className="text-[#e28529] pb-8 text-2xl">
                 {" "}
                 How do we do it ?{" "}
@@ -130,7 +130,7 @@ const Second = ({ currentView }) => {
             </div>
 
             <div className="w-[35%] transform translate-y-20">
-              <p className="text-white px-4 transform -translate-x-8">
+              <p className="text-white px-4 pt-28 transform -translate-x-8">
                 We will help to structure and launch any project that passes the
                 dragons tests, giving it the best opportunity to prosper and
                 ensuring that: <br /> <br />

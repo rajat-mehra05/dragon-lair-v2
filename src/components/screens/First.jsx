@@ -40,9 +40,9 @@ const First = ({ currentView }) => {
   useEffect(() => {
     if (currentView === 2) {
       controls.start({
-        y: "-200px",
-        x: "-450px",
-        scale: 0.5,
+        y: "-300px",
+        x: "-520px",
+        scale: 0.7,
       });
 
       setTimeout(() => {
